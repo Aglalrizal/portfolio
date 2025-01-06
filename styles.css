@@ -1,0 +1,261 @@
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #3D3D3D;
+    width: 100%;
+    color: #FFFAEC;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+nav {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Toggle button */
+.nav-toggle {
+    display: none; /* Default hidden */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 50px;
+    background-color: #f6f1e8;
+}
+
+.hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0 0 20px;
+}
+
+.hero .buttons button {
+    background-color: #578E7E;
+    color: #FFFAEC;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero .buttons button:hover {
+    background-color:rgb(71, 114, 102);
+}
+
+.projects {
+    text-align: center;
+    padding: 25px 50px;
+    background-color: #578E7E;
+}
+
+/* .projects h2 {
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    padding-bottom: 15px;
+    color: white;
+    border-bottom: 1px solid #FFFAEC;
+} */
+
+.projects h2 {
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    display: inline-block; 
+    position: relative; 
+    color: #FFFAEC;  
+}
+
+.projects h2::after {
+    content: "";
+    display: block;
+    height: 3px;           
+    background-color: #FFFAEC; 
+    width: 100%;           
+    margin-top: 15px;      
+}
+
+.projects .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projects .grid .container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #FFFAEC;
+}
+
+.projects .grid img {
+    width: 100%;
+    height: auto;
+}
+
+.projects .container a {
+    text-decoration: none !important;
+    color: #3D3D3D;
+}
+
+.projects .container:hover {
+    background-color:rgb(240, 236, 224);
+}
+
+.projects .grid p {
+    margin-top: 10px;
+}
+
+.projects button {
+    background-color: #FFFAEC;
+    color: #3D3D3D;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+}
+
+.projects button:hover {
+    background-color:rgb(240, 236, 224);
+}
+
+
+.contacts {
+    background-color: #FFFAEC;
+    text-align: center;
+    padding: 30px 25px;
+}
+
+.contacts h3 {
+    margin: 5px 0 0;
+    font-size: 1.8rem;
+    color: #3D3D3D;
+}
+
+.contacts p {
+    font-size: 1.3rem;
+    margin: 5px 0 15px;
+    color: #3D3D3D;
+}
+
+.contact a {
+    font-size: 1.3rem;
+    display: block;
+    color: #3D3D3D;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact a i {
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #3D3D3D;
+    text-align: right;
+    padding: 10px;
+    color: #FFFAEC;
+}
+
+.typing {
+    display: inline-block;
+    border-right: 2px solid black;
+    animation: blink 0.7s steps(2, start) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default on small screens */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 150px;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex; /* Show menu when toggle is active */
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+    .projects .grid {
+        grid-template-columns: 2fr;
+    }
+}
